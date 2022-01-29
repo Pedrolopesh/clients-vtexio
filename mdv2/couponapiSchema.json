@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "couponCode": {
+      "type": "string"
+    }
+  },
+
+  "required": ["couponCode"],
+  "v-indexed": ["couponCode"],
+  "v-default-fields": [],
+  "v-security": {
+    "allowGetAll": true,
+    "publicRead": [],
+    "publicWrite": [],  
+    "publicFilter": []
+  },
+  "v-cache": false
+}

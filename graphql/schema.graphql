@@ -1,0 +1,10 @@
+type Query {
+  getAllCoupon(page: Int, pageSize: Int, where: String): couponPagination
+  listCoupon(id: String): CouponType
+}
+
+type Mutation {
+  deleteListType(id: String): Boolean
+  resolveCreateCoupon(listTypeInput: CouponInputType): CouponType
+  updateListType(id: String, CouponInputType: CouponInputType): CouponType
+}
