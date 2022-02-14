@@ -1,0 +1,28 @@
+{
+  "properties": {
+    "user": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    },
+    "userstatus": {
+      "type": "string",
+      "enum": ["active", "inactive", "block"]
+    },
+    "favorites": {
+      "type": "array"
+    }
+  },
+
+  "required": ["user","username", "userstatus", "favorites"],
+  "v-indexed": ["user","username", "userstatus", "favorites"],
+  "v-default-fields": ["user","username", "userstatus", "favorites"],
+  "v-security": {
+    "allowGetAll": true,
+    "publicRead": ["user","username", "userstatus", "favorites"],
+    "publicWrite": ["user","username", "userstatus", "favorites"],
+    "publicFilter": ["user","username", "userstatus", "favorites"]
+  },
+  "v-cache": false
+}
