@@ -2,8 +2,8 @@
   "name": "avanti-vtexio-boilerplate-backend",
   "vendor": "avantivtexio",
   "version": "0.0.1",
-  "title": "backend service for validade and make middleware between third parties and frontend application",
-  "description": "Reference app for VTEX IO Services",
+  "title": "",
+  "description": "",
   "mustUpdateAt": "2018-01-04",
   "categories": [],
   "dependencies": {},
@@ -21,13 +21,6 @@
       "name": "outbound-access",
       "attrs": {
         "host": "httpstat.us",
-        "path": "*"
-      }
-    },
-    {
-      "name": "outbound-access",
-      "attrs": {
-        "host": "quest-game-api.herokuapp.com",
         "path": "*"
       }
     },

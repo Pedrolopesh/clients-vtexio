@@ -13,7 +13,6 @@ import { middleDelete } from './middlewares/midExemples/delete'
 import { middleGet } from './middlewares/midExemples/get'
 import { middleUpdate } from './middlewares/midExemples/update'
 import { middleGetPagination } from './middlewares/midExemples/pagination'
-import { exmpleMiddleRequest } from './middlewares/exemples/get'
 
 const TIMEOUT_MS = 800
 
@@ -88,10 +87,6 @@ export default new Service<Clients, State, ParamsContext>({
     deleteMethod: method({
       DELETE: [middleDelete],
     }),
-
-    routeTest: method({
-      POST:[exmpleMiddleRequest]
-    })
 
   },
 })
