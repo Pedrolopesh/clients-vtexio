@@ -8,11 +8,7 @@ import { status } from './middlewares/status'
 import { validate } from './middlewares/validate'
 
 //middlewares
-import { middleCreate } from './middlewares/midExemples/create'
-import { middleDelete } from './middlewares/midExemples/delete'
-import { middleGet } from './middlewares/midExemples/get'
-import { middleUpdate } from './middlewares/midExemples/update'
-import { middleGetPagination } from './middlewares/midExemples/pagination'
+import { createProductMiddle } from './middlewares/product/create'
 
 const TIMEOUT_MS = 800
 
@@ -68,25 +64,9 @@ export default new Service<Clients, State, ParamsContext>({
       GET: [validate, status],
     }),
 
-    putMethod: method({
-      POST: [middleCreate],
-    }),
-
-    getMethod: method({
-      GET: [middleGet],
-    }),
-
-    postMethod: method({
-      GET: [middleUpdate],
-    }),
-
-    patchMethod: method({
-      PATCH: [middleGetPagination],
-    }),
-
-    deleteMethod: method({
-      DELETE: [middleDelete],
-    }),
+    createProduct: method({
+      POST: [createProductMiddle]
+    })
 
   },
 })
